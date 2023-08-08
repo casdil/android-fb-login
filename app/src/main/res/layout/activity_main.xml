@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView
+            style="?attr/materialCardViewElevatedStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    app:cardCornerRadius="55dp"
+                    android:backgroundTint="#7B1FA2"
+                    android:layout_margin="15dp"
+                    style="?attr/materialCardViewOutlinedStyle">
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PIX TEAM"
+                        android:layout_marginTop="15dp"
+                        style="@style/TextAppearance.Material3.TitleMedium"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test account"
+                        android:layout_marginTop="5dp"
+                        style="@style/TextAppearance.Material3.BodyMedium"
+                        />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_height="match_parent"
+                        android:layout_width="70dp"
+                        app:cardCornerRadius="0dp"
+                        android:layout_alignParentRight="true"
+                        style="?attr/materialCardViewFilledStyle">
+
+
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/filledButton"
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Upgrage Your Account"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?attr/materialCardViewFilledStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</FrameLayout>
