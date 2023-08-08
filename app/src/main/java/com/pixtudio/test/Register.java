@@ -72,7 +72,7 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Authentication failed.",
+                                    Toast.makeText(Register.this, "Account added",
                                             Toast.LENGTH_SHORT).show();
 
                                 } else {

@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProfileFragment">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <com.google.android.material.card.MaterialCardView
             style="?attr/materialCardViewElevatedStyle"
             android:layout_height="wrap_content"
@@ -20,8 +20,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="55dp"
                     android:layout_height="55dp"
@@ -30,30 +31,33 @@
                     android:layout_margin="15dp"
                     style="?attr/materialCardViewOutlinedStyle">
 
-
                 </com.google.android.material.card.MaterialCardView>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/user_details"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PIX TEAM"
                         android:layout_marginTop="15dp"
-                        style="@style/TextAppearance.Material3.TitleMedium"
-                        />
+                        style="@style/TextAppearance.Material3.TitleMedium" />
+
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Test account"
                         android:layout_marginTop="5dp"
-                        style="@style/TextAppearance.Material3.BodyMedium"
-                        />
+                        style="@style/TextAppearance.Material3.BodyMedium" />
                 </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <com.google.android.material.card.MaterialCardView
                         android:layout_height="match_parent"
                         android:layout_width="70dp"
@@ -61,26 +65,26 @@
                         android:layout_alignParentRight="true"
                         style="?attr/materialCardViewFilledStyle">
 
-
                     </com.google.android.material.card.MaterialCardView>
+
                 </RelativeLayout>
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/filledButton"
                 android:layout_width="wrap_content"
-                android:textSize="15dp"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="50dp"
                 android:text="Upgrage Your Account"
-                android:layout_centerInParent="true"
-                />
+                android:textSize="15dp" />
         </RelativeLayout>
+
         <com.google.android.material.card.MaterialCardView
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
@@ -94,8 +98,20 @@
                 android:orientation="vertical">
 
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
-    </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Diğer bileşenler burada yer alabilir -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corner_background"
+                android:text="Logout"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </LinearLayout>
 </FrameLayout>
