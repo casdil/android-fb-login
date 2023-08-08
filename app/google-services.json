@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "546485683114",
+    "project_id": "pixtranslator",
+    "storage_bucket": "pixtranslator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546485683114:android:fbe5361ab06c68c0aae1d3",
+        "android_client_info": {
+          "package_name": "com.example.pixvoicetranslation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546485683114-g3p342mtiooo0p2agfk5oep8s82p6t0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8r6D5Wq9FZVQeZ0NUHvjxFcu9P6LdHMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546485683114-g3p342mtiooo0p2agfk5oep8s82p6t0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546485683114:android:5ba38d09bb8ba7b3aae1d3",
+        "android_client_info": {
+          "package_name": "com.pixtudio.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546485683114-g3p342mtiooo0p2agfk5oep8s82p6t0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8r6D5Wq9FZVQeZ0NUHvjxFcu9P6LdHMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546485683114-g3p342mtiooo0p2agfk5oep8s82p6t0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
