@@ -110,8 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/rounded_corner_background"
-                android:text="Logout"
-                android:textColor="#000000" />
+                android:text="Logout"/>
         </RelativeLayout>
     </LinearLayout>
 </FrameLayout>
