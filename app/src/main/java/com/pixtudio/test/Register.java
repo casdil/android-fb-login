@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -19,7 +18,6 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.ktx.Firebase;
 
 public class Register extends AppCompatActivity {
 
@@ -50,23 +48,24 @@ public class Register extends AppCompatActivity {
 
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String email,password;
-                email = String.valueOf(editTextEmail.getText().toString());
-                password = String.valueOf(editTextPassword.getText().toString());
+                String email = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
 
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(Register.this,"Enter email",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(Register.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(Register.this,"Enter password",Toast.LENGTH_SHORT).show();
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    Toast.makeText(Register.this, "Invalid email format", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
+
+                progressBar.setVisibility(View.VISIBLE);
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -74,16 +73,33 @@ public class Register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Account added",
-                                            Toast.LENGTH_SHORT).show();
-
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    if (user != null) {
+                                        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(Register.this, "Account created. Please check your email for verification.", Toast.LENGTH_LONG).show();
+                                                } else {
+                                                    Toast.makeText(Register.this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                                    }
                                 } else {
-                                    Toast.makeText(Register.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
+                                    if (task.getException() != null && task.getException().getMessage() != null) {
+                                        String errorMessage = task.getException().getMessage();
+                                        if (errorMessage.contains("email address is already in use")) {
+                                            Toast.makeText(Register.this, "This email is already registered.", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    } else {
+                                        Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             }
                         });
-
             }
         });
     }
