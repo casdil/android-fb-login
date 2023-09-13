@@ -38,8 +38,6 @@ Features
 - Make changes in a branch and regularly update it.
 - Create a pull request to submit your changes for review.
     
----
-
 ## Contact
 
 - Mail: yavsar155@gmail.com
