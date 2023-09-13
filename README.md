@@ -38,6 +38,6 @@ Contributions
     Make changes in a branch and regularly update it.
     Create a pull request to submit your changes for review.
 ---
-    [Email Address]
-    [Project Link]
-    [Other Contact Information]
+    yavsar155@gmail.com
+    [[Project Link]](https://github.com/YasinAvsr/LoGin)https://github.com/YasinAvsr/LoGin
+    Discord: yasin.avsar
