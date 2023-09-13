@@ -1,7 +1,7 @@
 LoGin
 
 A basic Android Firebase login and registration app
-Project Description
+Project
 
 This application is a basic Android login and registration app using Firebase. The app allows users to create accounts and log in to existing ones.
 Features
