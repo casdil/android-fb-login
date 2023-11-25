@@ -1,4 +1,4 @@
-# LoGin
+# Firebase login
 
 A basic Android Firebase login and registration app
 Project
