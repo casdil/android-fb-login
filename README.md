@@ -41,5 +41,4 @@ Features
 ## Contact
 
 - Mail: yavsar155@gmail.com
-- Project: https://github.com/YasinAvsr/LoGin
-- Discord: yasin.avsar
+- Discord: darira1
